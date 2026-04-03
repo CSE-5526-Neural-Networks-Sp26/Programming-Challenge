@@ -1,8 +1,8 @@
 # 🎤 Speech Emotion Recognition Challenge
 ### CSE 5526: Introduction to Neural Networks — Autumn 2025
 
-> **Due: Wednesday, April 23, 2025 at 11:59 p.m.**  
-> **Team size: 3–4 students**  
+> **Due: Wednesday, May 04, 2026 at 11:59 a.m.**  
+> **Team size: 2-3 students**  
 > **Submit to:** your team's private GitHub repository under the `challenge/` folder
 
 ---
@@ -45,7 +45,7 @@ Dataset/
     train_labels.csv
   public_test/
     audio/
-    public_test_labels.csv
+    test_labels.csv
 ```
 
 Each labels CSV has two columns: `clip_id` and `emotion`.
@@ -62,12 +62,12 @@ challenge/
   test.py            ← evaluates a saved model on the test set
   results/
     baseline/
-      best_model.pt  ← saved after training
+      best_model.pt  ← saved baseline model after training
       norm_stats.pt  ← normalisation statistics (required by test.py)
       loss_curve.png ← generated after training
 ```
 
-You are free to modify any of the provided files or add new ones. The only requirement is that your final submission contains a working `inference.py` (see [Submission](#submission) below).
+You are free to modify any of the provided files or add new ones. The only requirement is that your final submission contains a working `test.py` (see [Submission](#submission) below).
 
 ---
 
@@ -77,9 +77,9 @@ The provided baseline is a 2-layer LSTM trained on 64-bin Mel-spectrograms. It i
 
 - **Input:** 64-bin Mel-spectrogram (25 ms window, 10 ms hop)
 - **Architecture:** 2-layer LSTM, 128 hidden units, linear output layer
-- **Optimizer:** Adam, lr = 1e-3
-- **Scheduler:** ReduceLROnPlateau (factor 0.5, patience 2)
-- **Batch size:** 64 | **Max epochs:** 20 | **Early stopping patience:** 3
+- **Optimizer:** Adam, lr = 1e-2
+- **Scheduler:** ReduceLROnPlateau (factor 0.5, patience 5)
+- **Batch size:** 64 | **Max epochs:** 100 | **Early stopping patience:** 10
 - **Initialisation:** Xavier uniform
 
 ---
@@ -100,9 +100,9 @@ Download the dataset from the link on Canvas and unzip it so the `Dataset/` fold
 
 ```bash
 python train.py \
-    --data_dir  Dataset \
+    --data_dir  dataset \
     --output_dir results/baseline \
-    --run_name  baseline
+    --run_name  baseline_train
 ```
 
 This will:
@@ -116,10 +116,10 @@ This will:
 
 ```bash
 python test.py \
-    --test_dir   Dataset/public_test \
+    --test_dir   dataset/public_test \
     --model_path results/baseline/best_model.pt \
     --stats_path results/baseline/norm_stats.pt \
-    --run_name   baseline
+    --run_name   baseline_test
 ```
 
 This prints weighted F1 and per-class F1 to stdout and logs a confusion matrix to wandb.
@@ -132,7 +132,7 @@ If training is interrupted, simply re-run the same `train.py` command — it wil
 
 ## Your Task
 
-Implement and evaluate **at least two approaches** that improve upon the baseline. You are free to explore any direction, including but not limited to:
+Implement and evaluate your model that improves upon the baseline. You are free to explore any direction, including but not limited to:
 
 **Architecture**
 - Bidirectional LSTM
@@ -155,7 +155,7 @@ For each approach, your notebook must include:
 1. A description of what was changed and why
 2. Training and validation learning curves
 3. Weighted F1 and per-class F1 on the test set
-4. A comparison with the baseline and discussion of what helped
+4. A comparison with the baseline and a discussion of what helped
 
 ---
 
