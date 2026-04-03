@@ -39,11 +39,11 @@ The dataset is split by **speaker identity** — no speaker appears in more than
 After downloading, unzip and place the dataset so the directory structure looks like this:
 
 ```
-Dataset/
+dataset/
   train/
     audio/
     train_labels.csv
-  public_test/
+  test/
     audio/
     test_labels.csv
 ```
