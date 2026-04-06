@@ -154,9 +154,9 @@ Implement and evaluate your model that improves upon the baseline. You are free 
 - Learning rate warmup or cosine annealing
 - Data augmentation
 
-**Use of pre-trained models is NOT allowed**
+[!WARNING] **Use of pre-trained models is NOT allowed**
 
-**Use of external data is NOT allowed**
+[!WARNING] **Use of external data is NOT allowed**
 
 ---
 
@@ -172,6 +172,9 @@ Commit the following to your team's private GitHub repository before the deadlin
 | `best_model.pt` | Your best trained model weights |
 | `test.py` | Evaluation script — loads `best_model.pt` and generates `<team_name>.csv` for leaderboard submission |
 | `README.md` | Instruction on how to run the test file|
+
+> [!WARNING]
+> Your submitted `test.py` must run without errors. We will run it on the hidden test set after the deadline to produce the final CSV for grading. A script that crashes or produces incorrectly formatted output receives **zero** for the hidden test component. Test it on the public test set before submitting.
 
 ### Submit to the leaderboard
 
@@ -224,7 +227,7 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 - You may consult papers, documentation, and blogs for learning — but **do not copy code**
 - Sharing code, models, or predictions between teams is not permitted
 
-Violations will result in a zero for the assignment and may be referred to the university academic conduct process.
+‼️ Violations will result in a zero for the assignment and may be referred to the university academic conduct process.
 
 ---
 
