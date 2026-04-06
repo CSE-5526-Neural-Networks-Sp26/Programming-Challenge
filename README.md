@@ -83,6 +83,10 @@ The provided baseline is a 2-layer LSTM trained on 64-bin Mel-spectrograms. It i
 - **Batch size:** 64 | **Max epochs:** 100 | **Early stopping patience:** 10
 - **Initialisation:** Xavier uniform
 
+**Baseline performance on the public test set: weighted F1 = 0.4276**
+
+For reference, random chance across 6 balanced emotion classes would give a weighted F1 of ~0.167 (1/6). The baseline is well above chance but leaves substantial room for improvement — beating it should be achievable with a better architecture, features, or training strategy.
+
 ---
 
 ## Getting Started
