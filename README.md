@@ -292,3 +292,24 @@ Zhao, Z., Bao, Z., Zhang, Z., Schuller, B., & Zheng, Y. (2021). Exploring deep s
 ### Survey
 
 Akçay, M. B., & Oğuz, K. (2020). Speech emotion recognition: Emotional models, databases, features, preprocessing methods, supporting modalities, and classifiers. Speech Communication, 116, 56–76. — Comprehensive survey covering the full SER pipeline from features to architectures.
+
+### Features
+
+**Spectrogram / Mel-spectrogram**
+- Allen, J. B. (1977). Short term spectral analysis, synthesis, and modification by discrete Fourier transform. *IEEE Transactions on Acoustics, Speech, and Signal Processing*, 25(3), 235–238. — Foundational paper on the short-time Fourier transform (STFT), the basis for the spectrogram.
+
+**MFCCs, delta and delta-delta features**
+- Davis, S. B., & Mermelstein, P. (1980). Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences. *IEEE Transactions on Acoustics, Speech, and Signal Processing*, 28(4), 357–366. — The original paper introducing Mel-frequency cepstral coefficients (MFCCs). Delta (velocity) and delta-delta (acceleration) coefficients are computed as first and second temporal derivatives of the MFCCs to capture dynamic information across frames.
+
+---
+
+### Training strategy
+
+**Learning rate warmup**
+- Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30. — Introduced the Transformer architecture along with a warmup + inverse square root decay learning rate schedule that has since become standard practice for training deep models.
+
+**Label smoothing**
+- Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. *CVPR*, 2818–2826. — Introduced label smoothing as a regularisation technique that prevents the model from becoming overconfident, improving generalisation.
+
+**Audio data augmentation**
+- Park, D. S., Chan, W., Zhang, Y., Chiu, C.-C., Zoph, B., Cubuk, E. D., & Le, Q. V. (2019). SpecAugment: A simple data augmentation method for automatic speech recognition. *INTERSPEECH*, 2613–2617. — Proposes masking blocks of time steps and frequency channels directly on the log-Mel spectrogram. Simple, effective, and directly applicable to this challenge.
