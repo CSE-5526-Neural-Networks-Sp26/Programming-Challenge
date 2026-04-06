@@ -9,7 +9,7 @@
 
 ## Overview
 
-In this challenge, your team will build a Speech Emotion Recognition (SER) system using PyTorch. You are given a baseline model and a labelled audio dataset. Your goal is to improve upon the baseline by exploring better architectures, features, and training strategies. Your final model will be evaluated on a **hidden test set** that you do not have access to during development.
+In this challenge, your team will build a Speech Emotion Recognition (SER) system using PyTorch. You are given a **baseline model** and a **labelled audio dataset**. Your goal is to improve upon the baseline by exploring better architectures, features, and training strategies. Your final model will be evaluated on a **hidden test set** that you do not have access to during development.
 
 The dataset contains audio recordings from multiple speakers, each expressing one of **6 emotions**:
 
@@ -24,7 +24,7 @@ The dataset contains audio recordings from multiple speakers, each expressing on
 
 The dataset is split by **speaker identity** — no speaker appears in more than one split. This makes the task harder than a random split and requires your model to generalize to unseen speakers.
 
-| Split | Clips | Labels provided? |
+| Split | Clips | Data and Labels provided? |
 |-------|-------|-----------------|
 | Train | ~5,950 | ✅ Yes |
 | Test | ~950 | ✅ Yes |
@@ -36,7 +36,7 @@ The dataset is split by **speaker identity** — no speaker appears in more than
 
 > 📦 **Download link:** [Dataset.zip](https://buckeyemailosu-my.sharepoint.com/:u:/g/personal/hassan_491_buckeyemail_osu_edu/IQDpR99dZnVxTY3zlEWqST1PAWi9bau2_cde6xEd3nixgT0?e=zC3b0D)
 
-After downloading, unzip and place the dataset so the directory structure looks like this:
+After downloading, **unzip** and place the dataset so the directory structure looks like this:
 
 ```
 dataset/
@@ -99,7 +99,7 @@ pip install torch torchaudio scikit-learn pandas matplotlib wandb tqdm
 
 ### 2. Download and prepare the dataset
 
-Download the dataset and unzip it so the `dataset/` folder is in the same directory as your code.
+Download the dataset and unzip it so the `dataset/` folder is in the **same directory as your code**.
 
 ### 3. Train the baseline
 
@@ -128,7 +128,7 @@ python test.py \
     --run_name    baseline_test
 ```
 
-This prints weighted F1 and per-class F1 to stdout, logs a confusion matrix to wandb, and writes `baseline.csv` to `results/baseline/`.
+**This prints weighted F1 and per-class F1 to stdout, logs a confusion matrix to wandb, and writes `baseline.csv` to `results/baseline/`.**
 
 ### 5. Resume an interrupted training run
 
@@ -182,9 +182,9 @@ Commit the following to your team's private GitHub repository before the deadlin
 
 ### Submit to the leaderboard
 
-Push your <team_name>.csv file to the leaderboard repository under the submissions/ folder. The leaderboard updates automatically and you will be able to see your rank.
+Push your **<team_name>.csv** file to the leaderboard repository under the **submissions/** folder. The leaderboard updates automatically and you will be able to see your rank.
 
-Note: The leaderboard shows your rank on the public test set only. Evaluation on the hidden test set will be conducted after the due date and used for final grading.
+Note: The leaderboard shows your rank on the **public test set only**. Evaluation on the hidden test set will be conducted after the due date and used for final grading.
 
 View rankings at: https://github.com/CSE-5526-Neural-Networks-Sp26/Leaderboard
 
@@ -221,7 +221,7 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 | Top 33% | 25 |
 | Top 10% | 30 |
 
-> Percentile thresholds are computed across all teams that beat the baseline. Ties in weighted F1 share the higher bracket.
+> Percentile thresholds are computed across all teams that beat the baseline. Ties in weighted F1 share the **higher bracket**.
 
 ---
 
