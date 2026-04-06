@@ -34,7 +34,7 @@ The dataset is split by **speaker identity** — no speaker appears in more than
 
 ## Dataset
 
-> 📦 **Download link:** `[TO BE ANNOUNCED ON CANVAS]`
+> 📦 **Download link:** [Dataset.zip](https://buckeyemailosu-my.sharepoint.com/:u:/g/personal/hassan_491_buckeyemail_osu_edu/IQDpR99dZnVxTY3zlEWqST1PAWi9bau2_cde6xEd3nixgT0?e=zC3b0D)
 
 After downloading, unzip and place the dataset so the directory structure looks like this:
 
@@ -95,7 +95,7 @@ pip install torch torchaudio scikit-learn pandas matplotlib wandb tqdm
 
 ### 2. Download and prepare the dataset
 
-Download the dataset from the link on Canvas and unzip it so the `dataset/` folder is in the same directory as your code.
+Download the dataset and unzip it so the `dataset/` folder is in the same directory as your code.
 
 ### 3. Train the baseline
 
@@ -154,6 +154,9 @@ Implement and evaluate your model that improves upon the baseline. You are free 
 - Learning rate warmup or cosine annealing
 - Data augmentation
 
+**Use of pre-trained models is not allowed**
+**Use of external data is not allowed**
+
 ---
 
 ## Submission
@@ -205,10 +208,10 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 | Leaderboard standing | Points |
 |----------------------|--------|
 | At or below baseline | 0 |
-| Beats baseline — bottom third (below 67th percentile) | 12 |
-| Top third (67th–90th percentile) | 18 |
-| Top quarter (75th–90th percentile) | 25 |
-| Top 10% (above 90th percentile) | 30 |
+| Beats baseline — bottom third (below 67th percentile) | 15 |
+| Top 66% | 20 |
+| Top 33% | 25 |
+| Top 10% | 30 |
 
 > Percentile thresholds are computed across all teams that beat the baseline. Ties in weighted F1 share the higher bracket.
 
@@ -219,7 +222,6 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 - All code must be written by your team
 - You may consult papers, documentation, and blogs for learning — but **do not copy code**
 - Sharing code, models, or predictions between teams is not permitted
-- Use of pre-trained models or external transfer learning is not allowed
 
 Violations will result in a zero for the assignment and may be referred to the university academic conduct process.
 
@@ -227,7 +229,7 @@ Violations will result in a zero for the assignment and may be referred to the u
 
 ## Questions
 
-Post general questions in the **`#challenge`** channel on MS Teams. Do not include any part of your solution in public posts. For help with your specific implementation, message the instructor or TA privately.
+Post general questions in the **`#ProgrammingChallenge`** channel on MS Teams. Do not include any part of your solution in public posts. For help with your specific implementation, message the instructor or TA privately.
 
 ## Suggested Reading
 The following are fundamental and widely cited papers on speech emotion recognition using deep neural networks. You are not required to read all of them — use them as inspiration for your experiments.
