@@ -175,7 +175,7 @@ Commit the following to your team's private GitHub repository before the deadlin
 | `train.py` | Training pipeline |
 | `best_model.pt` | Your best trained model weights |
 | `test.py` | Evaluation script — loads `best_model.pt` and generates `<team_name>.csv` for leaderboard submission |
-| `<team_name>.csv` | Generated from `test.py` |
+| `<team_name>.csv` | Generated from `test.py` - predicted labels |
 | `README.md` | Instruction on how to run the test file |
 
 The generated CSV must have exactly two columns — `clip_id` and `predicted_emotion` — with one row per audio clip:
