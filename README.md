@@ -154,9 +154,9 @@ Implement and evaluate your model that improves upon the baseline. You are free 
 - Learning rate warmup or cosine annealing
 - Data augmentation
 
-[!WARNING] **Use of pre-trained models is NOT allowed**
+> [!WARNING] **Use of pre-trained models is NOT allowed**
 
-[!WARNING] **Use of external data is NOT allowed**
+> [!WARNING] **Use of external data is NOT allowed**
 
 ---
 
