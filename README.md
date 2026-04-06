@@ -175,7 +175,20 @@ Commit the following to your team's private GitHub repository before the deadlin
 | `train.py` | Training pipeline |
 | `best_model.pt` | Your best trained model weights |
 | `test.py` | Evaluation script — loads `best_model.pt` and generates `<team_name>.csv` for leaderboard submission |
-| `README.md` | Instruction on how to run the test file|
+| `<team_name>.csv` | Generated from `test.py` |
+| `README.md` | Instruction on how to run the test file |
+
+The generated CSV must have exactly two columns — `clip_id` and `predicted_emotion` — with one row per audio clip:
+
+```
+clip_id,predicted_emotion
+clip_000001,anger
+clip_000002,happy
+clip_000003,neutral
+...
+```
+
+Valid emotion labels: `anger`, `disgust`, `fear`, `happy`, `neutral`, `sad`.
 
 > [!WARNING]
 > Your submitted `test.py` must run without errors. We will run it on the hidden test set after the deadline to produce the final CSV for grading. A script that crashes or produces incorrectly formatted output receives **zero** for the hidden test component. Test it on the public test set before submitting.
