@@ -209,6 +209,17 @@ Record a **15–20 minute** presentation covering your approach, experiments, an
 | Code quality (readability, comments, efficiency) | 5 |
 | **Total** | **100** |
 
+### Experimental approaches rubric
+
+Points are awarded based on the technical depth of what was tried and the results achieved relative to the baseline.
+
+| Criteria | Points |
+|----------|--------|
+| No changes beyond the baseline | 0 |
+| Minor hyperparameter tuning only | 1–10 |
+| Meaningful attempt but room for improvements | 11–25 |
+| Substantive exploration across multiple components | 26–40 |
+
 ### Hidden test performance rubric
 
 Points are awarded based on your team's **percentile rank on the leaderboard** among all teams that beat the baseline. Teams that do not beat the baseline receive 0 points for this component.
@@ -222,6 +233,27 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 | Top 10% | 30 |
 
 > Percentile thresholds are computed across all teams that beat the baseline. Ties in weighted F1 share the **higher bracket**.
+
+### Recorded presentation rubric
+
+Every team member must speak. Presentations that do not include all members will be penalized.
+
+| Criteria | Points |
+|----------|--------|
+| No presentation or incomprehensible | 0 |
+| Poorly structured, hard to follow, missing key results | 1–8 |
+| Adequate — covers approach and results but lacks clarity or depth | 9–16 |
+| Clear, well-structured, covers approach, results, and design choices, all members present | 17–21 |
+| Excellent — professional delivery, insightful, engaging, all members contribute meaningfully | 22–25 |
+
+### Code quality rubric
+
+| Criteria | Points |
+|----------|--------|
+| Code does not run or is completely unreadable | 0 |
+| Code runs but is poorly organised, no comments, hard to follow | 1–2 |
+| Reasonably readable with some comments and logical structure | 3–4 |
+| Clean, well-commented, easy to follow, good variable names and structure | 5 |
 
 ---
 
