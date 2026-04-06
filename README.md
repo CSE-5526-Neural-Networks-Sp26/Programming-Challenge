@@ -205,8 +205,8 @@ Record a **15–20 minute** presentation covering your approach, experiments, an
 |-----------|--------|
 | Experimental approaches | 40 |
 | Hidden test performance (leaderboard percentile rank) | 30 |
-| Code quality (readability, comments, efficiency) | 15 |
-| Recorded presentation | 15 |
+| Recorded presentation | 25 |
+| Code quality (readability, comments, efficiency) | 5 |
 | **Total** | **100** |
 
 ### Hidden test performance rubric
