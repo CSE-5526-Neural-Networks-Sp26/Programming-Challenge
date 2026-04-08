@@ -1,7 +1,7 @@
 # 🎤 Speech Emotion Recognition Challenge
 ### CSE 5526: Introduction to Neural Networks — Spring 2026
 
-> **Due: Wednesday, May 04, 2026 at 11:59 a.m.**  
+> **Due: Monday, May 04, 2026 at 11:59 a.m.**  
 > **Team size: 2–3 students**  
 > **Submit to:** your team's private GitHub repository
 
@@ -81,6 +81,7 @@ The provided baseline is a 2-layer LSTM trained on 64-bin Mel-spectrograms. It i
 - **Optimizer:** Adam, lr = 1e-2
 - **Scheduler:** ReduceLROnPlateau (factor 0.5, patience 5)
 - **Batch size:** 64 | **Max epochs:** 100 | **Early stopping patience:** 10
+- **Loss:** Cross-entropy (multi-class classification)
 - **Initialisation:** Xavier uniform
 
 **Baseline performance on the public test set: weighted F1 = 0.4276**
@@ -90,6 +91,8 @@ For reference, random chance across 6 balanced emotion classes would give a weig
 ---
 
 ## Getting Started
+
+> 💡 **You are encouraged to use OSC** (Ohio Supercomputer Center) to run your experiments, to avoid delays from computing issues. Instructions on using OSC will be covered during class. Do NOT hesitate to reach out if you have issues or questions about this at any point.
 
 ### 1. Install dependencies
 
@@ -172,7 +175,7 @@ Commit the following to your team's private GitHub repository before the deadlin
 |------|-------------|
 | `dataloader.py` | Your data loading pipeline |
 | `model.py` | Model definition(s) |
-| `train.py` | Training pipeline |
+| `train.py` | Training pipeline — produces outputs (`best_model.pt`) in `results/<team_name>/` |
 | `best_model.pt` | Your best trained model weights |
 | `test.py` | Evaluation script — loads `best_model.pt` and generates `<team_name>.csv` for leaderboard submission |
 | `<team_name>.csv` | Generated from `test.py` - predicted labels |
@@ -208,7 +211,15 @@ Record a **15–20 minute** presentation covering your approach, experiments, an
 - Every team member must present
 - Practice beforehand — re-record as necessary and submit your best version
 - Share the CarmenZoom recording link with the instructor via **MS Teams** by the deadline
-- Upload your slides on **canvas**
+- Upload `slides.pdf` to **Canvas** — one submission per group
+
+Your presentation should consist of the following:
+
+1. A brief introduction that summarises the problem, explains why it is important, and includes motivations that highlight its significance
+2. A description of your approach, especially how it differs from the baseline — including features, architecture, number of layers, cost function, optimisation, and regularisation
+3. An outline of your experiments and experimental setup — dataset, parameter settings, evaluation measures, and other relevant details
+4. A summary of results using tables and figures, with detailed discussion of key findings
+5. Challenges encountered, differences between the initial and final approach, and recommendations for future work
 
 ---
 
@@ -240,12 +251,12 @@ Points are awarded based on your team's **percentile rank on the leaderboard** a
 | Leaderboard standing | Points |
 |----------------------|--------|
 | At or below baseline | 0 |
-| Beats baseline — bottom third (below 67th percentile) | 15 |
-| Top 66% | 20 |
-| Top 33% | 25 |
-| Top 10% | 30 |
+| Beats baseline | 15 |
+| Top 66% (among teams that beat the baseline) | 18 |
+| Top 33% (among teams that beat the baseline) | 25 |
+| Top 10% (among teams that beat the baseline) | 30 |
 
-> Percentile thresholds are computed across all teams that beat the baseline. Ties in weighted F1 share the **higher bracket**.
+> Any team that beats the baseline automatically receives 15 points. Percentile thresholds are computed only among teams that beat the baseline. Ties in weighted F1 share the higher bracket.
 
 ### Recorded presentation rubric
 
@@ -277,6 +288,12 @@ Every team member must speak. Presentations that do not include all members will
 - Sharing code, models, or predictions between teams is not permitted
 
 ‼️ Violations will result in a zero for the assignment and may be referred to the university academic conduct process.
+
+---
+
+## Late Submission Policy
+
+All files related to the final submission and presentation must be submitted on time. **Late submissions will not be graded.** Extensions will not be granted for unexcused reasons.
 
 ---
 
