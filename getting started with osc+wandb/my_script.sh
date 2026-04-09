@@ -3,7 +3,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=3:00:00 
 #SBATCH --job-name=test_run
-#SBATCH --account=ACCOUNT_NAME
+#SBATCH --account=PAS3361
 
 #SBATCH --mem=64gb
 
