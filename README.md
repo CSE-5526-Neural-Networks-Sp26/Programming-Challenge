@@ -227,36 +227,59 @@ Your presentation should consist of the following:
 
 | Component | Points |
 |-----------|--------|
-| Experimental approaches | 40 |
-| Hidden test performance (leaderboard percentile rank) | 30 |
+| Public test performance | 40 |
+| Hidden test performance (weighted F1 vs. baseline) | 30 |
 | Recorded presentation | 25 |
 | Code quality (readability, comments, efficiency) | 5 |
 | **Total** | **100** |
+| Bonus | up to 10 |
 
-### Experimental approaches rubric
+### Public test performance rubric
 
-Points are awarded based on the technical depth of what was tried and the results achieved relative to the baseline.
+Points are awarded based on weighted F1 achieved on the public test set.
 
-| Criteria | Points |
-|----------|--------|
-| No changes beyond the baseline | 0 |
-| Minor hyperparameter tuning only | 1–10 |
-| Meaningful attempt but room for improvements | 11–25 |
-| Substantive exploration across multiple components | 26–40 |
+| Performance | Points |
+|-------------|--------|
+| At or below baseline (≤ 0.4276) | 0 |
+| Beats baseline | 15 |
+| F1 ≥ 0.50 | 20 |
+| F1 ≥ 0.55 | 25 |
+| F1 ≥ 0.60 | 30 |
+| F1 ≥ 0.65 | 35 |
+| F1 ≥ 0.70 | 40 |
+
+> The public test labels are provided. Submit your `<team_name>.csv` to the leaderboard to see your score.
 
 ### Hidden test performance rubric
 
-Points are awarded based on your team's **percentile rank on the leaderboard** among all teams that beat the baseline. Teams that do not beat the baseline receive 0 points for this component.
+Points are awarded based on relative improvement over the baseline score on the hidden test set.
 
-| Leaderboard standing | Points |
-|----------------------|--------|
+| Improvement over baseline | Points |
+|---------------------------|--------|
 | At or below baseline | 0 |
 | Beats baseline | 15 |
-| Top 66% (among teams that beat the baseline) | 18 |
-| Top 33% (among teams that beat the baseline) | 25 |
-| Top 10% (among teams that beat the baseline) | 30 |
+| +5% | 17 |
+| +10% | 19 |
+| +15% | 22 |
+| +20% | 25 |
+| +25% | 28 |
+| +30% | 30 |
 
-> Any team that beats the baseline automatically receives 15 points. Percentile thresholds are computed only among teams that beat the baseline. Ties in weighted F1 share the higher bracket.
+> Improvement is computed as: (team F1 − baseline F1) / baseline F1 × 100.
+
+### Bonus points (up to 10 pts)
+
+In addition to the above, bonus points are awarded based on leaderboard rank among all teams that beat the baseline. These are added on top of the 100-point total.
+
+| Leaderboard rank | Bonus points |
+|------------------|--------------|
+| 1st place | 10 |
+| 2nd place | 8 |
+| 3rd place | 6 |
+| Top 33% (ranks 4–6) | 3 |
+| Top 66% (ranks 7–13) | 1 |
+
+> Only teams that beat the baseline are eligible for bonus points. Ties in weighted F1 share the higher bracket.
 
 ### Recorded presentation rubric
 
