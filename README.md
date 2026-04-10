@@ -269,7 +269,7 @@ Points are awarded based on relative improvement over the baseline score on the 
 
 ### Bonus points (up to 10 pts)
 
-In addition to the above, bonus points are awarded based on leaderboard rank among all teams that beat the baseline. These are added on top of the 100-point total.
+In addition to the above, bonus points are awarded based on final leaderboard rank (on the hidden test set) among all teams that beat the baseline. These are added on top of the 100-point total.
 
 | Leaderboard rank | Bonus points |
 |------------------|--------------|
